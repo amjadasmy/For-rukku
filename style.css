@@ -29,11 +29,16 @@ body::before{
         rgba(0,180,255,.18),
         transparent 60%
     );
+
+    /* Prevent overlay from blocking clicks */
+    pointer-events:none;
 }
 
 .container{
     width:90%;
     max-width:700px;
+
+    position:relative;
     z-index:5;
 }
 
