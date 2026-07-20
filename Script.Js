@@ -9,7 +9,28 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    button.addEventListener("click", function () {
+    button.addEventListener("click", function () {window.onload = function () {
+
+    const button = document.getElementById("openBtn");
+    const start = document.getElementById("start");
+    const message = document.getElementById("message");
+
+    console.log("Script loaded");
+
+    button.onclick = function () {
+
+        console.log("Button clicked");
+
+        start.style.display = "none";
+        message.style.display = "block";
+
+        setTimeout(function(){
+            message.classList.add("show");
+        },100);
+
+    };
+
+};
 
         // Prevent clicking multiple times
         button.disabled = true;
